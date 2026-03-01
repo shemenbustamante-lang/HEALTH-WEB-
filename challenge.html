@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Challenge - Student Health Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🥗 Student Health Hub</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meals.html">What Should I Eat?</a></li>
+                <li><a href="nutrients.html">Know Your Nutrients</a></li>
+                <li><a href="tips.html">Health Tips</a></li>
+                <li><a href="habits.html">Check My Habits</a></li>
+                <li><a href="challenge.html" class="active">Weekly Challenge</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Fun Challenges for Students! 🎯</h1>
+            <p>Take on weekly challenges to build healthy habits. Complete them to earn badges!</p>
+        </section>
+
+        <section class="current-challenge card">
+            <div class="challenge-spotlight">
+                <h2>🌟 This Week's Featured Challenge</h2>
+                <div class="featured-challenge">
+                    <div class="challenge-icon-large">🍎</div>
+                    <h3>Eat One Fruit Per Day</h3>
+                    <p class="challenge-goal">Goal: Eat at least one serving of fruit every day for 7 days</p>
+                    <div class="progress-section">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="mainChallengeProgress" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-label"><span id="mainDaysCompleted">0</span>/7 days completed</p>
+                    </div>
+                    <button class="btn-primary" onclick="markDayComplete('mainChallenge')">Mark Today Complete ✓</button>
+                    
+                    <div class="trivia-box">
+                        <h4>🧠 Did You Know?</h4>
+                        <p>Eating a variety of fruits provides different vitamins and minerals. Each color of fruit offers unique health benefits! For example, orange fruits like mangoes are rich in Vitamin A for eye health, while berries are packed with antioxidants that protect your cells.</p>
+                    </div>
+
+                    <div class="why-box">
+                        <h4>💪 Why This Challenge?</h4>
+                        <ul>
+                            <li>Fruits boost your immune system</li>
+                            <li>Natural sugars give you energy</li>
+                            <li>Fiber helps digestion</li>
+                            <li>Vitamins support brain function for studying</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-challenges">
+            <h2>Choose Your Challenge</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card card">
+                    <div class="challenge-icon">💧</div>
+                    <h3>Drink 8 Glasses of Water Daily</h3>
+                    <p class="challenge-desc">Stay hydrated throughout the day</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> Water helps you concentrate better in class, prevents headaches, and keeps your body functioning properly. Your brain is 75% water!
+                    </div>
+                    <div class="challenge-tracker">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="waterProgress" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-label"><span id="waterDays">0</span>/7 days</p>
+                    </div>
+                    <button class="btn-secondary" onclick="markDayComplete('water')">Complete Today ✓</button>
+                    <div class="badge-mini" id="waterBadge" style="display: none;">
+                        <span>🏆 Hydration Hero!</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card card">
+                    <div class="challenge-icon">🥕</div>
+                    <h3>Try a New Healthy Snack</h3>
+                    <p class="challenge-desc">Experiment with a nutritious snack you've never tried</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> Expanding your food choices helps you get a wider range of nutrients. Plus, you might discover a new favorite healthy snack!
+                    </div>
+                    <div class="snack-ideas">
+                        <strong>Ideas to try:</strong>
+                        <ul>
+                            <li>Carrot sticks with hummus</li>
+                            <li>Apple slices with peanut butter</li>
+                            <li>Greek yogurt with berries</li>
+                            <li>Trail mix (nuts and dried fruit)</li>
+                        </ul>
+                    </div>
+                    <button class="btn-secondary" onclick="completeSnackChallenge()">I Tried It! ✓</button>
+                    <div class="badge-mini" id="snackBadge" style="display: none;">
+                        <span>🏆 Snack Explorer!</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card card">
+                    <div class="challenge-icon">🥤</div>
+                    <h3>Swap Soda for Water or Juice</h3>
+                    <p class="challenge-desc">Replace sugary drinks with healthier options</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> One can of soda contains about 10 teaspoons of sugar! Switching to water or fresh juice reduces empty calories and is better for your teeth and energy levels.
+                    </div>
+                    <div class="challenge-tracker">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="sodaProgress" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-label"><span id="sodaDays">0</span>/7 days</p>
+                    </div>
+                    <button class="btn-secondary" onclick="markDayComplete('soda')">No Soda Today ✓</button>
+                    <div class="badge-mini" id="sodaBadge" style="display: none;">
+                        <span>🏆 Sugar Slayer!</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card card">
+                    <div class="challenge-icon">🍳</div>
+                    <h3>Eat Breakfast Every Day</h3>
+                    <p class="challenge-desc">Start each day with a nutritious breakfast</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> Breakfast literally means "breaking the fast" from sleeping. It jumpstarts your metabolism, improves memory and concentration, and gives you energy for the day ahead.
+                    </div>
+                    <div class="challenge-tracker">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="breakfastProgress" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-label"><span id="breakfastDays">0</span>/7 days</p>
+                    </div>
+                    <button class="btn-secondary" onclick="markDayComplete('breakfast')">Had Breakfast ✓</button>
+                    <div class="badge-mini" id="breakfastBadge" style="display: none;">
+                        <span>🏆 Morning Champion!</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card card">
+                    <div class="challenge-icon">🥗</div>
+                    <h3>Add Vegetables to Every Meal</h3>
+                    <p class="challenge-desc">Include at least one vegetable in each meal</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> Vegetables are loaded with vitamins, minerals, and fiber. They're low in calories but high in nutrients, helping you stay healthy and energized for your studies.
+                    </div>
+                    <div class="challenge-tracker">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="veggieProgress" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-label"><span id="veggieDays">0</span>/7 days</p>
+                    </div>
+                    <button class="btn-secondary" onclick="markDayComplete('veggie')">Veggies Done ✓</button>
+                    <div class="badge-mini" id="veggieBadge" style="display: none;">
+                        <span>🏆 Veggie Lover!</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card card">
+                    <div class="challenge-icon">🍜</div>
+                    <h3>Cook One Homemade Meal</h3>
+                    <p class="challenge-desc">Prepare at least one meal from scratch this week</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> Cooking your own meals helps you control ingredients, portions, and nutrition. It's also a valuable life skill and often more affordable than eating out!
+                    </div>
+                    <div class="recipe-ideas">
+                        <strong>Easy recipes to try:</strong>
+                        <ul>
+                            <li>Fried rice with egg and vegetables</li>
+                            <li>Scrambled eggs with toast</li>
+                            <li>Simple pasta with tomato sauce</li>
+                            <li>Vegetable soup</li>
+                        </ul>
+                    </div>
+                    <button class="btn-secondary" onclick="completeCookingChallenge()">I Cooked! ✓</button>
+                    <div class="badge-mini" id="cookBadge" style="display: none;">
+                        <span>🏆 Home Chef!</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card card">
+                    <div class="challenge-icon">🚫</div>
+                    <h3>No Junk Food for 3 Days</h3>
+                    <p class="challenge-desc">Challenge yourself to avoid chips, candy, and fast food</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> Giving your body a break from processed foods lets you feel the difference in your energy levels and focus. You might be surprised how much better you feel!
+                    </div>
+                    <div class="challenge-tracker">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="junkProgress" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-label"><span id="junkDays">0</span>/3 days</p>
+                    </div>
+                    <button class="btn-secondary" onclick="markDayComplete('junk')">No Junk Today ✓</button>
+                    <div class="badge-mini" id="junkBadge" style="display: none;">
+                        <span>🏆 Clean Eater!</span>
+                    </div>
+                </div>
+
+                <div class="challenge-card card">
+                    <div class="challenge-icon">🍌</div>
+                    <h3>Eat Different Colored Foods</h3>
+                    <p class="challenge-desc">Eat foods of at least 3 different colors each day</p>
+                    <div class="challenge-trivia">
+                        <strong>Why?</strong> Different colored foods contain different nutrients! Red foods have lycopene, orange has beta-carotene, green has chlorophyll, etc. Eating a rainbow ensures diverse nutrition.
+                    </div>
+                    <div class="color-guide">
+                        <strong>Color examples:</strong>
+                        <div class="color-tags">
+                            <span class="color-tag red">Red: Tomato, Apple</span>
+                            <span class="color-tag orange">Orange: Carrot, Mango</span>
+                            <span class="color-tag green">Green: Broccoli, Spinach</span>
+                            <span class="color-tag purple">Purple: Eggplant, Grapes</span>
+                            <span class="color-tag white">White: Rice, Banana</span>
+                        </div>
+                    </div>
+                    <div class="challenge-tracker">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="colorProgress" style="width: 0%"></div>
+                        </div>
+                        <p class="progress-label"><span id="colorDays">0</span>/7 days</p>
+                    </div>
+                    <button class="btn-secondary" onclick="markDayComplete('color')">Ate Colorfully ✓</button>
+                    <div class="badge-mini" id="colorBadge" style="display: none;">
+                        <span>🏆 Rainbow Eater!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="badges-earned card">
+            <h2>🏆 Your Earned Badges</h2>
+            <p>Complete challenges to collect badges and celebrate your achievements!</p>
+            <div class="badge-collection" id="badgeCollection">
+                <div class="empty-badge">Complete challenges to earn badges!</div>
+            </div>
+        </section>
+
+        <section class="motivation-section card">
+            <h2>💪 Keep Going!</h2>
+            <div class="motivation-quotes">
+                <p>"Small steps lead to big changes!"</p>
+                <p>"Every healthy choice counts, no matter how small."</p>
+                <p>"You're building habits that will last a lifetime."</p>
+                <p>"Progress, not perfection!"</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌱 Student Health Hub - Building healthier eating habits together</p>
+        <p>&copy; 2026 Student Healthy Eating Guide</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

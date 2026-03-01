@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Healthy Eating Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🥗 Student Health Hub</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="meals.html">What Should I Eat?</a></li>
+                <li><a href="nutrients.html">Know Your Nutrients</a></li>
+                <li><a href="tips.html">Health Tips</a></li>
+                <li><a href="habits.html">Check My Habits</a></li>
+                <li><a href="challenge.html">Weekly Challenge</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Welcome! Let's build healthier eating habits together. 🌱</h1>
+            <p>Your guide to eating well as a student - simple, practical, and achievable!</p>
+        </section>
+
+        <section class="why-section card">
+            <h2>Why Healthy Eating Matters for Students</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="icon">🧠</span>
+                    <h3>Better Focus</h3>
+                    <p>Nutritious food helps you concentrate better in class</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="icon">⚡</span>
+                    <h3>More Energy</h3>
+                    <p>Right foods keep you energized throughout the day</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="icon">💪</span>
+                    <h3>Stronger Body</h3>
+                    <p>Good nutrition supports your growth and immunity</p>
+                </div>
+                <div class="benefit-card">
+                    <span class="icon">😊</span>
+                    <h3>Better Mood</h3>
+                    <p>Healthy eating improves your overall well-being</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="for-you-section">
+            <h2>For Students Like You</h2>
+            <div class="student-cards">
+                <div class="student-card card">
+                    <span class="student-icon">🌅</span>
+                    <h3>If you skip breakfast, this is for you</h3>
+                    <p>Discover quick and easy breakfast options that fit your morning routine</p>
+                    <a href="meals.html#breakfast" class="btn-secondary">See Breakfast Ideas</a>
+                </div>
+                <div class="student-card card">
+                    <span class="student-icon">⏰</span>
+                    <h3>Busy student? Try this snack</h3>
+                    <p>Smart snacking ideas that you can grab between classes</p>
+                    <a href="meals.html#snacks" class="btn-secondary">View Snack Options</a>
+                </div>
+                <div class="student-card card">
+                    <span class="student-icon">💰</span>
+                    <h3>On a budget? These foods are affordable</h3>
+                    <p>Budget-friendly healthy meals that won't break the bank</p>
+                    <a href="meals.html#budget" class="btn-secondary">Budget Meals</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-tools">
+            <h2>Quick Tools for You</h2>
+            <div class="tools-grid">
+                <div class="tool-card card">
+                    <span class="tool-icon">✅</span>
+                    <h3>Daily Food Checklist</h3>
+                    <div class="checklist">
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="breakfast-check">
+                            <span>Did you eat breakfast?</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="water-check">
+                            <span>Drink water? (8 glasses)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="fruit-check">
+                            <span>Eat a fruit?</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" id="vegetable-check">
+                            <span>Eat vegetables?</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="tool-card card">
+                    <span class="tool-icon">📊</span>
+                    <h3>Food Habit Self-Check</h3>
+                    <p>Tick what you usually eat in a day:</p>
+                    <div class="checklist">
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Rice/Bread</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Protein (meat/fish/egg)</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Vegetables</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Fruits</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox">
+                            <span>Junk food</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="tool-card card">
+                    <span class="tool-icon">🌱</span>
+                    <h3>Weekly Healthy Challenge</h3>
+                    <p class="challenge-text">This Week's Challenge:</p>
+                    <div class="challenge-box">
+                        <p><strong>🍎 Eat one fruit per day this week</strong></p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 0%" id="challenge-progress"></div>
+                        </div>
+                        <p class="progress-text">0/7 days completed</p>
+                    </div>
+                    <a href="challenge.html" class="btn-secondary">See More Challenges</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to Start Your Healthy Journey?</h2>
+            <div class="cta-buttons">
+                <a href="meals.html" class="btn-primary">What Should I Eat?</a>
+                <a href="tips.html" class="btn-primary">Healthy Student Tips</a>
+                <a href="habits.html" class="btn-primary">Check My Eating Habits</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌱 Student Health Hub - Building healthier eating habits together</p>
+        <p>&copy; 2026 Student Healthy Eating Guide</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
