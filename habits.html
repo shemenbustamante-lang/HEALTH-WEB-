@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check My Eating Habits - Student Health Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🥗 Student Health Hub</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meals.html">What Should I Eat?</a></li>
+                <li><a href="nutrients.html">Know Your Nutrients</a></li>
+                <li><a href="tips.html">Health Tips</a></li>
+                <li><a href="habits.html" class="active">Check My Habits</a></li>
+                <li><a href="challenge.html">Weekly Challenge</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>How Healthy Are Your Eating Habits? 🔍</h1>
+            <p>Answer a few questions honestly to see how your current meals and snacks measure up. At the end, you'll get simple suggestions to improve your eating habits.</p>
+        </section>
+
+        <section class="quiz-container card">
+            <form id="habitsQuiz">
+                <div class="question-card">
+                    <h3>1. How often do you eat breakfast?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="5" required>
+                            <span>Every day (7 days a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="4">
+                            <span>Most days (5-6 days a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="3">
+                            <span>Sometimes (3-4 days a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="2">
+                            <span>Rarely (1-2 days a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="1">
+                            <span>Never or almost never</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>2. How many servings of fruits and vegetables do you eat daily?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q2" value="5" required>
+                            <span>5 or more servings</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="4">
+                            <span>3-4 servings</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="3">
+                            <span>2 servings</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="2">
+                            <span>1 serving</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="1">
+                            <span>None or rarely</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>3. How often do you eat chips, candies, or fast food?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="5" required>
+                            <span>Rarely (once a week or less)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="4">
+                            <span>Sometimes (2-3 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="3">
+                            <span>Often (4-5 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="2">
+                            <span>Almost daily (6 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="1">
+                            <span>Every day</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>4. How much water do you drink per day?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q4" value="5" required>
+                            <span>8 glasses or more</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="4">
+                            <span>5-7 glasses</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="3">
+                            <span>3-4 glasses</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="2">
+                            <span>1-2 glasses</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="1">
+                            <span>Less than 1 glass</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>5. How often do you skip meals?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="5" required>
+                            <span>Never - I eat all my meals</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="4">
+                            <span>Rarely (once a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="3">
+                            <span>Sometimes (2-3 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="2">
+                            <span>Often (4-5 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="1">
+                            <span>Very often (almost daily)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>6. Do you include protein (meat, fish, eggs, beans) in your meals?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q6" value="5" required>
+                            <span>Yes, in most meals</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="4">
+                            <span>Yes, at least once a day</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="3">
+                            <span>Sometimes during the week</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="2">
+                            <span>Rarely</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="1">
+                            <span>Almost never</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>7. How often do you drink sugary beverages (soda, sweetened juice)?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q7" value="5" required>
+                            <span>Never or rarely</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="4">
+                            <span>Once a week</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="3">
+                            <span>2-3 times a week</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="2">
+                            <span>4-6 times a week</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="1">
+                            <span>Daily</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>8. Do you eat late at night (after 9 PM)?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q8" value="5" required>
+                            <span>Never or rarely</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="4">
+                            <span>Sometimes (1-2 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="3">
+                            <span>Often (3-4 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="2">
+                            <span>Most nights (5-6 times a week)</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="1">
+                            <span>Every night</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>9. How balanced are your meals (mix of carbs, protein, vegetables)?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q9" value="5" required>
+                            <span>Always balanced</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="4">
+                            <span>Usually balanced</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="3">
+                            <span>Sometimes balanced</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="2">
+                            <span>Rarely balanced</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="1">
+                            <span>Never balanced</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>10. Do you pay attention to portion sizes?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q10" value="5" required>
+                            <span>Yes, always</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="4">
+                            <span>Most of the time</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="3">
+                            <span>Sometimes</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="2">
+                            <span>Rarely</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="1">
+                            <span>Never</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Get My Results</button>
+            </form>
+        </section>
+
+        <section id="results" class="results-section" style="display: none;">
+            <div class="results-card card">
+                <h2>Your Results</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="scoreText" class="score-number">0</span>
+                        <span class="score-total">/50</span>
+                    </div>
+                    <h3 id="scoreCategory" class="score-category"></h3>
+                </div>
+
+                <div id="scoreDescription" class="score-description"></div>
+
+                <div class="recommendations">
+                    <h3>💡 Personalized Suggestions for You:</h3>
+                    <ul id="recommendationsList"></ul>
+                </div>
+
+                <div class="badge-earned">
+                    <h3>🏆 Your Badge:</h3>
+                    <div id="badgeDisplay" class="badge-display"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="challenge.html" class="btn-primary">Take a Challenge</a>
+                    <a href="meals.html" class="btn-secondary">See Healthy Meals</a>
+                    <button onclick="location.reload()" class="btn-secondary">Retake Quiz</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌱 Student Health Hub - Building healthier eating habits together</p>
+        <p>&copy; 2026 Student Healthy Eating Guide</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
